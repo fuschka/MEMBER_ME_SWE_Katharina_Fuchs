@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" type="text/css" href="jquery/berry.min.css">
+    <link rel="stylesheet" type="text/css" href="css/myStyle.css">
+
+    <script type="text/javascript" src="jquery/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery.flip.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- PAGE 1-->
+
+
+    <div data-role="page" id="p1" class="page-container" data-prefetch="true">
+
+        <!--HEADER-->
+
+        <div data-tap-toggle="false" class="page-header">
+            <h1>Member Me?</h1>
+        </div>
+
+
+        <!--CONTENT-->
+
+        <div class="page-content">
+
+            <!--TITLE IMAGE-->
+
+            <div class="content-element-1">
+                <img class="title-img" src="img/Title.png">
+            </div>
+
+            <!--START BUTTON-->
+
+            <div class="content-element-2">
+                <a class="anchor" href="#p2" data-transition="pop">
+                    <img class="start-btn" src="img/StartBtn.png">
+                </a>
+            </div>
+
+            <!--HIGHSCORE-->
+            <div class="content-element-3">
+                <div class="highscore-text">
+                    <h3>Greatest Member:</h3>
+                </div>
+
+                <div class="highscore-number">
+                    <h2 id="Highscore">0</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PAGE 2-->
+
+
+    <div data-role="page" id="p2" class="page-container" data-prefetch="true">
+
+        <!--HEADER-->
+
+        <div data-tap-toggle="false" class="page-header">
+            <div class="dot-container">
+                <span class="dot" id="dot1"></span>
+                <span class="dot" id="dot2"></span>
+                <span class="dot" id="dot3"></span>
+                <span class="dot" id="dot4"></span>
+            </div>
+            <div class="score-container">
+                <span id="score">0</span>
+            </div>
+
+
+        </div>
+
+
+        <!--CONTENT-->
+
+        <div class="page-content card-container">
+
+            <!--LOST ANIMATION-->
+            <div id="lost">
+                <div>
+                    You</br> didn't </br>member!
+                </div>
+            </div>
+
+            <!--8 CARDS-->
+            <div class="card-column">
+                <div id="card1" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="1" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back1"></img>
+                    </div>
+                </div>
+
+                <div id="card2" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="2" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back2"></img>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-column">
+                <div id="card3" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="3" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back3"></img>
+                    </div>
+                </div>
+
+                <div id="card4" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="4" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back4"></img>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-column">
+                <div id="card5" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="5" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back5"></img>
+                    </div>
+                </div>
+
+                <div id="card6" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="6" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back6"></img>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-column">
+                <div id="card7" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="7" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back7"></img>
+                    </div>
+                </div>
+
+                <div id="card8" class="card">
+                    <div class="front tile">
+                        <img class="tile tileFront" id="8" src="img/TileFront.png"></img>
+                    </div>
+                    <div class="back tile">
+                        <img class="tile tileBack" src="img/cards/01Card.png" id="back8"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/Score.js"></script>
+    <script type="text/javascript" src="js/HighScore.js"></script>
+    <script type="text/javascript" src="js/Animation.js"></script>
+    <script type="text/javascript" src="js/CardAssigner.js"></script>
+    <script type="text/javascript" src="js/Game.js"></script>
+    <script type="text/javascript" src="js/Main.js"></script>
+</body>
+
+</html>

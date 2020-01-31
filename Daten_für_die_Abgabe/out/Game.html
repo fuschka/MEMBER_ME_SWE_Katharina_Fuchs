@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Game</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Game</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>Game<span class="signature">(maxFails, highscore, gameScore, myCardAssinger, myAnimation)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">Sets up the game using the classes HighScore, Score, Animation and CardAssigner.Note that the jquery plugin "jquery.flip" ist used for the card animation. Id for the cards must be: "card" + number,for the card backs: "back" + number, for the images on the card backs: number.The numbers have to start with 1 and be incremented.</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="Game"><span class="type-signature"></span>new Game<span class="signature">(maxFails, highscore, gameScore, myCardAssinger, myAnimation)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Initializes the game and makes it ready to be played.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxFails</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Number of maximum of failed moves before game is lost</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>highscore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HighScore.html">HighScore</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HighScore Object for the Game</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>gameScore</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Score.html">Score</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Score Object for the Game</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>myCardAssinger</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="CardAssigner.html">CardAssigner</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">CardAssigner for the Game</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>myAnimation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Animation.html">Animation</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Set of animations for the Game</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line18">line 18</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="cardClickHandler"><span class="type-signature"></span>cardClickHandler<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Has the user clicked two cards? No, flip it. Save card number for evaluation.Yes, save card number and  evaluate the move.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line65">line 65</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="evaluateMove"><span class="type-signature"></span>evaluateMove<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Function evaluates a move by checking if it was successful or notand decides what should happen next.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line87">line 87</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gameLost"><span class="type-signature"></span>gameLost<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Continues the game after losing it.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line156">line 156</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gameReset"><span class="type-signature"></span>gameReset<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Default reset contained in gameWon() and gameLost().
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line176">line 176</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="gameWon"><span class="type-signature"></span>gameWon<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Continues the game after winning it.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line141">line 141</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="initClickEvents"><span class="type-signature"></span>initClickEvents<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Handle function for click event of the Cards.Initialsizes Card-flip-triggers to be manual.Flips the card on click if less than two cards.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line47">line 47</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="moveFailed"><span class="type-signature"></span>moveFailed<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Updates the game after a failed move and checks if the game is lost. If it is lost, the function will call gameLost();
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line117">line 117</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="moveSuccessful"><span class="type-signature"></span>moveSuccessful<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Updates the game after a successful move and checks if the game is won. If it is won, the function will call gameWon();
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Game.js.html">Game.js</a>, <a href="Game.js.html#line102">line 102</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Animation.html">Animation</a></li><li><a href="CardAssigner.html">CardAssigner</a></li><li><a href="Game.html">Game</a></li><li><a href="HighScore.html">HighScore</a></li><li><a href="Score.html">Score</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jan 29 2020 15:48:41 GMT+0100 (GMT+01:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
